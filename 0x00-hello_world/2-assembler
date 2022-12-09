@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -S  -pipe $CFILE $CFILE | tr '.c' '.s'
