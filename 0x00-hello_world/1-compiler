@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -c -pipe $CFILE  $CFILE | tr '.c' '.o'
