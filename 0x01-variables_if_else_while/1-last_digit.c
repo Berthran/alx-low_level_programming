@@ -8,8 +8,8 @@
  * ldigit: the last digit on n
  * Return: 0
  */
-int main(void) 
-{ 
+int main(void)
+{
 	/* local variable definition */
 	int n, ldigit;
 
@@ -18,11 +18,11 @@ int main(void)
 	/* last digit variable definition */
 	ldigit = n % 10;
 	/*Conditional statement*/
-	if (ldigit > 5) 
+	if (ldigit > 5)
 		printf("Last digit of %d is %d and is greater than 5\n", n, ldigit);
-	if (ldigit == 0) 
+	if (ldigit == 0)
 		printf("Last digit of %d is %d and is 0\n", n, ldigit);
-	if (ldigit < 6 && ldigit != 0) 
+	if (ldigit < 6 && ldigit != 0)
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, ldigit);
 	return (0);
 }
