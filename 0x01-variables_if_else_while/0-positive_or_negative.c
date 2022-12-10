@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-/* 
+/**
  * main - determines if an integer is positive or negative
  * n: the number in question
  * Return: a printf statement
@@ -14,7 +14,8 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;	
+	n = rand() - RAND_MAX / 2;
+	
 	/*Conditional statement*/
 	if (n < 0)
 		printf("%d is negative\n", n);
