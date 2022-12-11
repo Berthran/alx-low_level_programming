@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints the english alphabet in lower case except the letters 'e' and 'q'
+ * main - prints the english alphabet except the letters 'e' and 'q'
  * letters - a varable to contain the english alphabets
  * Return: 0
  */
