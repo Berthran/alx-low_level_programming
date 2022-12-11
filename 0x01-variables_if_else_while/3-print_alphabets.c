@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints the english alphabet in lower case and then uppercase	
+ * main - prints the english alphabet in lower case and then uppercase
  * letters - a varable to contain the english alphabets
  * Return: 0
  */
