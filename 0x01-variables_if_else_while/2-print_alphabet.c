@@ -4,8 +4,7 @@
 
 /**
  * main - prints the english alphabet in lower case
- * 
- * ldigit: the last digit on n
+ * letters - a varable to contain the english alphabets 
  * Return: 0
  */
 int main(void)
@@ -14,7 +13,7 @@ int main(void)
 	char letters;
 
 	/*Conditional statement*/
-	for (letters = 'a'; letters <= 'z'; letters++)		
+	for (letters = 'a'; letters <= 'z'; letters++)
 		putchar(letters);
 	putchar('\n');
 	return (0);
