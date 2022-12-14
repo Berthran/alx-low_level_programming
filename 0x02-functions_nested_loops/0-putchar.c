@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
+ * main - prints the text _putchar one character at a time
  * program prints the text _putchad
- * Returns: if successful, 0
+ * Return: 0 if successfu
  */
 
 int main(void)
@@ -16,5 +17,6 @@ int main(void)
 	_putchar(text[5]);
 	_putchar(text[6]);
 	_putchar(text[7]);
+	_putchar('\n');
 	return (0);
 }
