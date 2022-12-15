@@ -9,7 +9,7 @@
 
 int _islower(int c)
 {
-	char small_caps[] = "abcdefghijklmnopqrst";
+	char small_caps[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 	/*Conditional statement*/
 	for (i = 0; i < 26; i++)
