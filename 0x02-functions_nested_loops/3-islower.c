@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * _islower - checks if a letter is lower case
- * @c - a varable to contain the english alphabets
+ * @c: a varable to contain the english alphabets
  *  small_caps - a string array of all letters of the english alohabel
  * Return: 1 if lower, 0therwise
  */
