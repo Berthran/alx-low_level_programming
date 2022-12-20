@@ -13,8 +13,8 @@ void puts2(char *str)
 
 	for (i = 0; *str != '\0'; i++)
 	{
-		_putchar(*(str + i));
-		str++;
+		_putchar(*str);
+		str += 2;
 	}
 	_putchar('\n');
 }
