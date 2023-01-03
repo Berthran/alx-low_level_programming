@@ -3,15 +3,15 @@
 #include <stdio.h>
 
 /**
- * _strchr - locates a character in a string.
+ * _strspn - locates a substring in a string.
  * @s: string variable
- * @c: character to find in string
+ * @accept: character to find in string
  *
- * Return: pointer to the first occurence of the character in string
+ * Return: length of strung matched in s
  */
 
 unsigned int _strspn(char *s, char *accept)
-{	
+{
 	int i;
 	int j;
 	char *pa;
@@ -25,7 +25,6 @@ unsigned int _strspn(char *s, char *accept)
 	for (i = 0; i < a_len; i++)
 	{
 		pa = accept + i;
-		
 		for (j = 0; j < s_len; j++)
 		{
 			if (*(s + j) == *pa)
