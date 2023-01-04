@@ -2,13 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-/*
+/**
  * string_toupper - changes lower case to upper case
  * @s: string literal
  *
- * Returns: all chaaractets in upper case
+ * Return: all chaaractets in upper case
  */
-
 char *string_toupper(char s[])
 {
 	int s_len = strlen(s);
