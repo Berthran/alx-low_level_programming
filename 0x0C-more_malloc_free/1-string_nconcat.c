@@ -40,9 +40,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		for (j = 0; j <= s2_len; j++)
 		{
-			i += 1;
-			strcat[i] = s2[j];
+			strcat[i + j] = s2[j];
 		}
+		strcat[-1] = '\0';
 		return (strcat);
 	}
 
@@ -50,5 +50,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		strcat[i + j] = s2[j];
 	}
+	strcat[-1] = '\0';
 	return (strcat);
 }
