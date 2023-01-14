@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * print_2digits - displays 2 digits numbers
  * @i: first number
  * @j: second number
@@ -15,8 +15,8 @@ void print_2digits(int i, int j)
 	int prod;
 
 	prod = i * j;
-	
-	if (prod > 9)
+
+	if (prod > 9 && prod <= 99)
 	{
 		div = prod / 10;
 		mod = prod % 10;
@@ -27,7 +27,7 @@ void print_2digits(int i, int j)
 }
 
 /**
- * print _3digits - displays a three digit numbered product of 2 numbers
+ * print_3digits - displays a three digit numbered product of 2 numbers
  * @i: first number
  * @j: second number
  *
@@ -40,7 +40,7 @@ void print_3digits(int i, int j)
 
 	prod = i * j;
 
-	if (prod > 99)
+	if (prod >= 100)
 	{
 		unit = prod % 10;
 		tens = (prod / 10) % 10;
