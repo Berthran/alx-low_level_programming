@@ -21,7 +21,7 @@ int print_sign(int n);
 
 int _abs(int n);
 
-int print_last_digit(int n);
+int print_last_digit(long int n);
 
 void print_minutes(int i, int j, int k, int l);
 
