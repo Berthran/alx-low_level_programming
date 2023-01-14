@@ -34,3 +34,9 @@ int add(int a, int b);
 void print_to_98(int n);
 
 void print_times_table(int n);
+
+void print_digit(int i, int j);
+
+void print_2digits(int i, int j);
+
+void print_3digits(int i, int j);
