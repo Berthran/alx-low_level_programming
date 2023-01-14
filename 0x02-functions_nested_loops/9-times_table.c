@@ -20,7 +20,7 @@ void times_table(void)
 		{
 			prod = i * j;
 			_putchar(',');
-			_putchar(' ');
+			_putchar('\t');
 			if (prod > 9)
 			{
 				div = prod / 10;
