@@ -1,5 +1,5 @@
-#ifndef DOG_H_INCLUDED
-#define DOG_H_INCLUDED
+#ifndef DOG_INCLUDED
+#define DOG_INCLUDED
 
 /**
  * struct dog - collwction of data to describe a dog
