@@ -1,6 +1,5 @@
 #ifndef MAIN_H_INCLUDED
 #define MAIN_H_INCLUDED
-#include <stdlib.h>
 
 /**
  * struct dog - collwction of data to describe a dog
@@ -15,4 +14,6 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
