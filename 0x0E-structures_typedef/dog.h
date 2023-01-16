@@ -1,5 +1,5 @@
-#ifndef MAIN_H_INCLUDED
-#define MAIN_H_INCLUDED
+#ifndef DOG_H_INCLUDED
+#define DOG_H_INCLUDED
 
 /**
  * struct dog - collwction of data to describe a dog
@@ -18,4 +18,5 @@ struct dog
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 void print_dog(struct dog *d);
+
 #endif
