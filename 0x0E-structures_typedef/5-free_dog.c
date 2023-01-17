@@ -15,5 +15,5 @@ void free_dog(dog_t *d)
 	pdog = malloc(sizeof(d));
 
 	if (pdog != NULL)
-	       	free(pdog);
+		free(pdog);
 }
