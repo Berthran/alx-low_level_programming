@@ -19,10 +19,10 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 	ptodog = d;
 
-	if (ptodog == NULL)
-		printf("Ok\n");
-
-	ptodog->name = name;
-	ptodog->age = age;
-	ptodog->owner = owner;
+	if (ptodog != NULL)
+	{
+		ptodog->name = name;
+		ptodog->age = age;
+		ptodog->owner = owner;
+	}
 }
