@@ -14,7 +14,7 @@ size_t print_list(const list_t *h)
 	size_t eleCounter = 0;
 	/** counts the number of elements in the linked list*/
 	if (h == NULL)
-		return (-1);
+		return (1);
 
 	while (h)
 	{
