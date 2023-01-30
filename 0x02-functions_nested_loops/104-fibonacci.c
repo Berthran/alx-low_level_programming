@@ -14,9 +14,9 @@ int main(void)
 	num1 = 1;
 	num2 = 1;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= 97; i++)
 	{
-		if (i == 9)
+		if (i == 97)
 			printf("%lu\n", num2);
 		else
 		{
@@ -26,5 +26,6 @@ int main(void)
 			num2 = next_num;
 		}
 	}
+	printf("\n");
 	return (0);
 }
