@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_listint - prints the elements of the linked list 
+ * print_listint - prints the elements of the linked list
  * @h: node pointer to the list (usually the head of the list)
  *
  * Return: number of nodes of the list
