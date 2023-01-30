@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 /**
  * print_listint - prints the elements of the linked list 
@@ -11,12 +11,12 @@
 
 size_t print_listint(const listint_t *h)
 {
-	size_t node_counter, i = 0;
+	size_t node_counter = 0;
 
 	if (h == NULL)
 		return node_counter;
 
-	while (h->next)
+	while (h)
 	{
 		printf("%d\n", h->n);
 		++node_counter;
