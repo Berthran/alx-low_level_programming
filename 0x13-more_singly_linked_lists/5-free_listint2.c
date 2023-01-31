@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * free_listint2 - frees up linked list memory and sets head to NULL
