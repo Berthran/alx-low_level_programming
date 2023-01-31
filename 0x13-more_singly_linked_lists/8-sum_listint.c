@@ -4,6 +4,8 @@
 /**
  * sum_listint - calculates the sum of elements in a linked list
  * @head: beginning of the list
+ *
+ * Return: sum of elements in the list
  */
 
 int sum_listint(listint_t *head)
