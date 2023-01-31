@@ -3,10 +3,9 @@
 #include <string.h>
 
 /**
- * ad_nodeint_end - adds a node at the end of the linked list
+ * add_nodeint_end - adds a node at the end of the linked list
  * @head: pointer to the head of the linked list
  * @n: integer value of the new linked list
- *
  * Return: pointer to new list
  */
 
@@ -38,4 +37,3 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	return (NULL);
 }
-
