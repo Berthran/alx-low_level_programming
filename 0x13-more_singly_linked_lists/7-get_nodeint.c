@@ -4,9 +4,10 @@
 
 /**
  * get_nodeint_at_index - access the node at index number
+ * @head: the beginning of the linked list
  * @index: position of node in the linked list
  *
- * Return: the node at index 'index'
+ * Return: the node at index 'index
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -32,4 +33,3 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	}
 	return (node_crawler);
 }
-
