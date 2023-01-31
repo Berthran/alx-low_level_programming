@@ -12,9 +12,11 @@
 int pop_listint(listint_t **head)
 {
 	int head_num;
-	int node_count = 0;
 	listint_t *hptr;
 	listint_t *hptr2;
+
+	int node_count = 0;
+
 
 	if (head != NULL)
 	{
@@ -29,12 +31,11 @@ int pop_listint(listint_t **head)
 		if (node_count == 0)
 			return (0);
 
-		free(hptr);
 		hptr2 = *head;
-		head_num = hptr2->next;
-		hptr2 = hptr2->next;
-		*head = hptr2;
+		head_num = hptr2->n;
+		*head = hptr2->next;
+		free(hptr2);
 		return (head_num);
 	}
-	return (NULL);
+	return (0);
 }
