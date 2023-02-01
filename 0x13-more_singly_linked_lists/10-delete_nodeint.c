@@ -11,12 +11,11 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *node_crawler, *node_to_del, *nodes_after;
-
+	listint_t *node_crawler, *node_to_del;
 	unsigned int i = 0;
-	nodes_after = NULL;
-	
-	if (head == NULL)
+	listint_t *nodes_after = NULL;
+
+	if (*head == NULL)
 		return (-1);
 	node_crawler = *head;
 
@@ -35,7 +34,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		++i;
 	}
 	node_to_del = node_crawler->next;
-	
+
 	if (node_to_del->next)
 		nodes_after = node_to_del->next;
 	node_crawler->next = nodes_after;
