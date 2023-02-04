@@ -21,7 +21,8 @@ int **alloc_grid(int width, int height)
 	 * Creates a pointer to pointers - which is a 
 	 * pointer to an array of 'height' pointers to integers
 	 */
-	int **arr_2D = (int **)malloc(height * sizeof(int *));
+	int **arr_2D;
+	arr_2D = (int **)malloc(height * sizeof(int *));
 
 	/*
 	 * Where each pointer will be set to point to a
