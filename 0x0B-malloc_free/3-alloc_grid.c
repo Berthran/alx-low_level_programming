@@ -4,8 +4,8 @@
 
 /**
  * alloc_grid - creates a zero intialised 2D array of integers
- * @width: the array's width
- * @height: the array's height
+ * @width: the array's width (no. of cols)
+ * @height: the array's height (no. of rows)
  *
  * Return: a pointer to the array
  */
@@ -13,35 +13,30 @@
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int **arr_2D;
+	
+	/* Creates a 2d-array (in the stack) which is an array of 'height' pointers to integers  and a pointer to that array*/
+	int *arr[height];
+	int **arr_2D = arr;
 
 	/*
-	 * Each starting element in each row is a pointer to
-	 * other elements in the same row
-	 * 0 --> [1,  2,  3]
-	 * 4 --> [5,  6,  7]
-	 * 8 --> [9, 10, 11]
-	 * That is they are pointers to integers.
+	 * Where each pointer will be set to point to a contigous memory allocated for 'width' integer elements
+	 * 	 |--->ptr1 --> [1,  2,  3]
+	 * arr-->|--->ptr2 --> [5,  6,  7]
+	 * 	 |--->ptr3 --> [9, 10, 11]
+	 * This makes arr (whose name is a const pointer) a pointer to pointers
 	 */
-
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	/*
-	 * Next we create a memory space to hold these row
-	 * pointers
-	 */
-	arr_2D = (int **)malloc(height * sizeof(int));
+	
+	/* Points each pointer to a contigous memory of 'width' integers */
+	for (i = 0; i < height; i++)
+		arr_2D[i] = (int *)malloc(width * sizeof(int));
 
 	if (arr_2D == NULL)
 		return (NULL);
 
-
-	for (i = 0; i < height; i++)
-		arr_2D[i] = malloc(width * sizeof(int));
-
-	/* Next, we intialize all the elements to zero */
-
+	/* Intialize each integer allocated memory to zero */
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
