@@ -5,7 +5,8 @@
 #include "main.h"
 
 /**
- * read_textfile - a function that reads a text file and prints it to the POSIX stdout
+ * read_textfile - a function that reads a text file and 
+ * prints it to the POSIX stdout
  * @filename: file to be read and printed
  * @letters: number of letters to be read and printed
  *
@@ -41,7 +42,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	close(fd1);
 	close(fd2);
-	close(fd3);
 	free(buf);
-	return (fd3);
+	return (fd2);
 }
