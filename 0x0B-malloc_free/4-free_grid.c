@@ -4,6 +4,7 @@
 
 /**
  * free_grid - frees a 2D array
+ * @grid: pointer to 2D array
  * @height: the array's height (no. of rows)
  *
  * Return: nothing
