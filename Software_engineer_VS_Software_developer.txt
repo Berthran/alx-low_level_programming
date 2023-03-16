@@ -1,0 +1,89 @@
+Software Developers
+============================================================================================Software developers design specific computer systems and application software. 
+
+may find themselves working in a more independent environment.
+
+Software developers work with other developers and programmers on a limited basis.
+
+Skills of a software developer
+Proficiency in popular programming languages like Python, Java, C++, and Scala
+Ability to write and test code
+Creativity 
+Ability to look at the big picture and small steps along the way 
+Presentation skills
+Familiarity with cross-browser compatibility
+Proficient in developing responsive web designs
+Ability to work on front-end application development 
+Knowledge of algorithms and data structures 
+Time management skills 
+
+Software developers may also be able to work remotely or in a freelance position easier than a software engineer.
+
+Developers who want to work in a managerial position may get started as a junior developer before becoming a senior software developer. 
+Developers who don’t want to manage others may stay in this role and pursue a specific type of development like front-end, back-end, full-stack, or mobile development. 
+
+If you’re interested in management positions, you can choose to pursue a career as a lead developer or technical architect or information technology (IT) systems architect who creates, maintains, and implements IT systems for a business. If following this path, the next step could likely be as a development team lead or software development manager, and finally director, vice president, or chief technology officer. 
+
+============================================================================================
+Software Engineers
+============================================================================================
+Software engineers work on a larger scale to design, develop, and test entire computer systems and application software for a company or organization—software development is a subset of software engineering. 
+
+tend to be in more collaborative roles in the workplace
+
+
+Skill set applicable to both SDs and SEs
+Analytical
+Pattern design and experience with cloud-based infrastructure.
+Strong problem solvers 
+Hands-on experience on multi-core CPU.
+Able to troubleshoot
+Good communicators.
+Professional Should be able to use various software development methodologies like Agile, Scrum, Kanban
+
+skills of a software engineer
+Extensive knowledge of a wide range of programming languages 
+Proficient in software development and computer operating systems 
+Proficient in advanced mathematics 
+Ability to apply engineering principles to software creation 
+Leadership skills 
+Ability to debug software and systems
+Ability to create scalable domain-specific pipelines and languages
+Ability to create the tools needed to develop software
+Project management skills 
+
+Career paths for software engineers could result in overseeing a team of people within a company and requiring more teamwork than software development positions.
+
+Up to three years—software engineers just entering the profession might spend up to three years building, launching, and debugging systems or applications as entry-level software engineers. 
+
+Three to five years—the next step is senior software engineer, where you might branch out into overseeing other engineers. 
+
+Six to nine years—from here, you may want to move into a tech lead position, which requires between six and nine years of experience. This is a managerial role, so you’ll likely have a team of people to manage. 
+
+13+ years—at this point, as an engineering manager or VP of engineering you may have ownership over processes or products. Individuals in these roles usually have upwards of 13+ years of experience in the industry. They can potentially have the opportunity to become a chief technology officer (CTO)—the highest technology executive position in a company. These individuals are in charge of an organization's research and development (R&D) and oversee an entire organization’s technological needs.
+
+
+============================================================================================
+The Future
+============================================================================================
+The future looks promising for these career paths as demand builds for the skills and knowledge of both software developers and engineers. As technology advances and the need for innovative software grows, so does the need for people who can design, create, build, and implement computer systems and applications software. 
+
+a bachelor's degree is often the standard minimum education requirement for software engineers. Earning a master’s degree allows you to pursue research, management, and information security careers.
+
+
+============================================================================================
+Pursuing certifications is an effective way for working professionals to expand their knowledge base. Many software development and engineering careers even require certifications before working with certain software projects. These certifications provide verification that you know enough about the software to work with it. 
+
+
+
+Common certifications offered to software engineers and software developers are: 
+
+Oracle 
+
+Microsoft 
+
+IBM 
+
+Cloud computing 
+
+Cybersecurity 

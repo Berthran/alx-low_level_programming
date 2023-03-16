@@ -1,0 +1,14 @@
+An assembly language is a programming language that communicates with the hardware 
+of a computer directly.
+An assembler is a program that translates commands into machine code. The assembler 
+gathers the instructions from the assembly language and translates each action into
+a series of electrical signals the machine can interpret
+
+C is an excellent choice for system programming, for example, developing operating
+systems, compilers, and network drivers.
+
+HISTORY OF C
+The C programming language was created at Bell Laboratories in the early 1970s, 
+mainly by Ken Thompson and Dennis Ritchie.
+Thompson's first high-level language was named  B after the BCPL system 
+programming language on which it was built.

@@ -1,0 +1,42 @@
+===========================================================================================
+Software engineer
+===========================================================================================
+A software engineer is a professional who applies the principles of software engineering for designing, development, maintenance, testing, and evaluation of computer software.
+Question: What are the principles of software engineering
+
+DESIGN --> DEVELOP --> MAINTAIN --> TEST --> EVALUATE
+
+A software engineer is involved in the complete process
+
+Software Engineer is a team activity.
+
+Software Engineer works with other components of the hardware system
+
+Software Engineer creates the tools to develop software. E.g. Visual studio, eclipse
+
+Engineers tend to solve issues on a much larger scale. So, there is not much room left for creative solutions, and instead, they need to be more systematic, and they’re thinking.	
+
+
+
+
+===========================================================================================
+Software developer
+===========================================================================================
+Software developers are professionals who build software which runs across various types of computer.
+
+Software Developer is primarily a solitary activity. Development is one aspect of the software project building process.
+
+Software Developers write a complete program.
+
+
+Software Developers use readymade tools to build apps. e.g. desktop apps like Photoshop, mobile apps like instagram, web apps like Facebook, and Twitter
+
+Developers tend to do everything that Engineers do but on a limited scale. This allows them to be more creative than an engineer, coming up with solutions.
+
+
+===========================================================================================
+Further Research
+===========================================================================================
+1. The principles of Software Engineering
+2. Successful Software engineers and software developers and their path to success
+3. 
