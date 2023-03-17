@@ -13,13 +13,14 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_dlistint_t, *head_crawler, *nodes_after;
-	unsigned int node = 0;
+	dlistint_t *new_dlistint_t, *head_crawler, *prev_node;
+	unsigned int no_of_nodes, node = 0;
 	new_dlistint_t = (dlistint_t *)malloc(sizeof(dlistint_t));
 
 	if (h == NULL || new_dlistint_t == NULL)
 		return (NULL);
 
+	no_of_nodes = count_dlistint_nodes(*h);
 	new_dlistint_t->n = n;
 	head_crawler = *h;
 
@@ -31,21 +32,32 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (*h);
 	}
 
-	while (node < (idx < 1))
+	else if (idx > 0 && idx < no_of_nodes)
 	{
-		if (head_crawler->next)
+		while (head_crawler != NULL)
 		{
+			prev_node = head_crawler;
 			head_crawler = head_crawler->next;
 			node += 1;
+			if (node == idx)
+			{
+				new_dlistint_t->prev = prev_node;
+				new_dlistint_t->next = head_crawler;
+				prev_node->next = new_dlistint_t;
+			}
 		}
-		else
-			return (NULL);
+		return (new_dlistint_t);
 	}
-	nodes_after = head_crawler->next;
-	new_dlistint_t->next = nodes_after;
-	new_dlistint_t->prev = head_crawler;
-	head_crawler->next = new_dlistint_t;
-	return (new_dlistint_t);
+	else if (idx == no_of_nodes)
+	{
+		while (head_crawler->next != NULL)
+			head_crawler = head_crawler->next;
+		new_dlistint_t->prev = head_crawler;
+		head_crawler->next = new_dlistint_t;
+		new_dlistint_t->next = NULL;
+		return (new_dlistint_t);
+	}
+	return (NULL);
 }
 
 /**
