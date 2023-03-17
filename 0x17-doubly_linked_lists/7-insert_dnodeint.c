@@ -66,7 +66,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * count_nodes - count no of nodes in a dlist
+ * count_dlistint_nodes - count no of nodes in a dlist
  * @head: the beginnig of the node
  *
  * Return: the number of nodes counted
@@ -81,7 +81,7 @@ size_t count_dlistint_nodes(dlistint_t *head)
 		return (0);
 
 	dlist_ptr = head;
-	
+
 	while (dlist_ptr != NULL)
 	{
 		dlist_ptr = dlist_ptr->next;
