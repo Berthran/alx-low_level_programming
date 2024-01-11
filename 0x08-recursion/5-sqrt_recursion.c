@@ -14,7 +14,8 @@ int sqr(int num);
 
 int _sqrt_recursion(int n)
 {
-	/* The natural sqrt "x" of a number "y" is a value "x"
+	/*
+	 * The natural sqrt "x" of a number "y" is a value "x"
 	 * lower than that number "y" that gives the number "y"
 	 * when "x" is multiplied by itself
 	 */
@@ -22,10 +23,18 @@ int _sqrt_recursion(int n)
 
 	if (n <= 0)
 		return (-1);
-	return _sqrt(n, count);
+	return (_sqrt(n, count));
 
 }
 
+
+/**
+ * _sqrt - compares the square of numbers with base number
+ * @base: number to find the square root
+ * @count: variable to use to reference back to 'base'
+ *
+ * Return: the square root of the number
+ */
 
 int _sqrt(int base, int count)
 {
@@ -35,9 +44,17 @@ int _sqrt(int base, int count)
 	if (sqr(base) == (base + count))
 		return (base);
 	count++;
-	return(_sqrt(base - 1, count));
+	return (_sqrt(base - 1, count));
 
 }
+
+
+/**
+ * sqr - returns the square of a number
+ * @num: number to square
+ *
+ * Return: number * number
+ */
 
 int sqr(int num)
 {
