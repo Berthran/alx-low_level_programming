@@ -42,10 +42,12 @@ int _sqrt(int base, int prev_num)
 
 	sqr = prev_num * prev_num;
 
-	if (prev_num >= base / 2)
-		return (-1); /* NO NATURAL SQUARE ROOT*/
-	else if (sqr == base)
+	if (sqr == base)
 		return (prev_num); /* NATURAL SQUARE ROOT FOUND */
+
+	else if (prev_num >= base / 2)
+		return (-1); /* NO NATURAL SQUARE ROOT*/
+
 	return (_sqrt(base, prev_num + 1));
 }
 
