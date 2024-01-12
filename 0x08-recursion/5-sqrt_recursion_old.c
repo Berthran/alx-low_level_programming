@@ -43,7 +43,7 @@ int _sqrt(int base, int count)
 
 	if (sqr(base) == (base + count))
 		return (base);
-	count++;
+	++count;
 	return (_sqrt(base - 1, count));
 
 }
@@ -60,15 +60,5 @@ int sqr(int num)
 {
 	return (num * num);
 }
-
-
-
-
-
-
-
-
-
-
 
 
