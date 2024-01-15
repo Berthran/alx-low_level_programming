@@ -15,25 +15,25 @@ int **alloc_grid(int width, int height)
 {
 	int i;
 	int *row;
-	int **columns;
+	int **grid;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	columns = (int **)malloc(sizeof(int *) * width);
+	grid = (int **)malloc(sizeof(int *) * height);
 
-	if (columns == NULL)
+	if (grid == NULL)
 		return (NULL);
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		row = (int *)malloc(sizeof(int) * height);
+		row = (int *)malloc(sizeof(int) * width);
 
 		if (row == NULL)
 			return (NULL);
 
-		columns[i] = initialize(row, height);
+		grid[i] = initialize(row, width);
 	}
-	return (columns);
+	return (grid);
 }
 
 
