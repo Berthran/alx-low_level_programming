@@ -30,19 +30,19 @@ int **alloc_grid(int width, int height)
 	/* Create array of integers */
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = (int *)malloc(sizeof(int) * width);
+		matrix[i] = (int *)malloc(sizeof(int) * width);
 		/* Handle malloc error */
-		if (grid[i] == NULL)
+		if (matrix[i] == NULL)
 		{
 			while (i-- >= 0) /* Start deallocation from last allocated block */
-				free(grid[i]);
-			free(grid);
+				free(matrix[i]);
+			free(matrix);
 			return (NULL);
 		}
 		/* If allocation successful, initialize */
-		grid[i] = initialize(grid[i], width);
+		matrix[i] = initialize(matrix[i], width);
 	}
-	return (grid);
+	return (matrix);
 }
 
 
