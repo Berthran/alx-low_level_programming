@@ -49,9 +49,9 @@ char **strtow(char *str)
 		str = last_letter(str);
 		temp_str = first_letter(str, no_of_bytes);
 
-		for (j = 0; j < (no_of_bytes - 1); j++)
+		for (j = 0; j < (no_of_bytes); j++)
 			s_arr[i][j] = *temp_str++;
-		s_arr[i][j] = '\0';
+		/*s_arr[i][j] = '\0';*/
 	}
 	s_arr[i] = NULL;
 	return (s_arr);
@@ -114,7 +114,7 @@ int byte_count(char *str_ptr)
 			str++;
 		}
 		if (byte_count > 0)
-			return (byte_count + 1); /* Including '\0' */
+			return (byte_count); /* Including '\0' */
 		str++;
 	}
 	return (byte_count);
@@ -161,7 +161,7 @@ char *first_letter(char *str, int bytes)
 
 	ptr = str;
 
-	for (i = 0; i < (bytes - 1); i++)
+	for (i = 0; i < (bytes); i++)
 		ptr--;
 	return (ptr);
 }
