@@ -19,18 +19,22 @@ char *argstostr(int ac, char **av)
 	int n, bytes, i, pos;
 	char *full_args;
 
-	/* Check arguments */
+	/* Check arguments and handle error*/
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	n = ac - 1;
-	bytes = byte_counter(av, ac) + n;
-	full_args = (char *)malloc(sizeof(char) * bytes);
 
+	n = ac - 1;
+	/* Number of bytes to allocate memory for */
+	bytes = byte_counter(av, ac) + ac;
+	/* Pointer to allocated memory location */
+	full_args = (char *)malloc((sizeof(char) * bytes) + 1);
+	/* Error handling for malloc failure */
 	if (full_args == NULL)
 		return (NULL);
 
 	i = 0;
 	pos = 0;
+
 	while (i <= n)
 	{
 		full_args = write_char(av[i], full_args, pos);
@@ -39,6 +43,7 @@ char *argstostr(int ac, char **av)
 		pos += 1;
 		i++;
 	}
+	full_args[pos] = '\0';
 	return (full_args);
 }
 
