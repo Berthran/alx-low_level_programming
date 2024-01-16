@@ -24,7 +24,7 @@ char **strtow(char *str)
 
 	if (str == NULL || str == emp_str)
 		return (NULL);
-	
+
 	/* Extract number of words from string */
 	no_of_words = word_count(str);
 	if (no_of_words == 0)
