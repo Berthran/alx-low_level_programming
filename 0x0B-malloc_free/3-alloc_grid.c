@@ -15,34 +15,31 @@ int *initialize(int *row, int height);
 int **alloc_grid(int width, int height)
 {
 	int i;
-	int **grid;
+	int **matrix;
 
+	/* Check value of width and height */
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	grid = (int **)malloc(sizeof(int *) * height);
-
-	if (grid == NULL)
-	{
-		free(grid);
+	/* Create ptr to array of pointers */
+	matrix = (int **)malloc(sizeof(int *) * height);
+	/* Handle malloc error */
+	if (matrix == NULL)
 		return (NULL);
-	}
 
+	/* Create array of integers */
 	for (i = 0; i < height; i++)
 	{
 		grid[i] = (int *)malloc(sizeof(int) * width);
-
+		/* Handle malloc error */
 		if (grid[i] == NULL)
 		{
-			while (i >= 0)
-			{
+			while (i-- >= 0) /* Start deallocation from last allocated block */
 				free(grid[i]);
-				i--;
-			}
 			free(grid);
 			return (NULL);
 		}
-
+		/* If allocation successful, initialize */
 		grid[i] = initialize(grid[i], width);
 	}
 	return (grid);
