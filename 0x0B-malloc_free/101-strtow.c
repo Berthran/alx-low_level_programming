@@ -24,35 +24,45 @@ char **strtow(char *str)
 
 	if (str == NULL || str == emp_str)
 		return (NULL);
-
+	
+	/* Extract number of words from string */
 	no_of_words = word_count(str);
 	if (no_of_words == 0)
 		return (NULL);
+
+	/* Calulate number of pointers needed */
 	no_of_ptrs = no_of_words + 1;
 
+	/* Allocate memory for no_of_ptrs on the heap */
 	s_arr = (char **)malloc(sizeof(char *) * no_of_ptrs);
 
+	/* Handle malloc error */
 	if (s_arr == NULL)
 		return (NULL);
 
 	for (i = 0; i < no_of_words; ++i)
 	{
+		/* Extract number of bytes from each word */
 		no_of_bytes = byte_count(str);
+		/* Allocate memory for bytes counted on the heap */
 		s_arr[i] = (char *)malloc(sizeof(char) * no_of_bytes);
 
+		/* Handle malloc error */
 		if (s_arr[i] == NULL)
 		{
 			free(s_arr[i]);
 			free(s_arr);
 			return (NULL);
 		}
+		/* Call function to move string to the next word */
 		str = last_letter(str);
+		/* Calls function to etrieve the first word from string*/
 		temp_str = first_letter(str, no_of_bytes);
-
+		/* Copy word into s_arr[i] */
 		for (j = 0; j < (no_of_bytes); j++)
 			s_arr[i][j] = *temp_str++;
-		/*s_arr[i][j] = '\0';*/
 	}
+	/* Set last element of array to NULL */
 	s_arr[i] = NULL;
 	return (s_arr);
 }
@@ -114,7 +124,7 @@ int byte_count(char *str_ptr)
 			str++;
 		}
 		if (byte_count > 0)
-			return (byte_count); /* Including '\0' */
+			return (byte_count);
 		str++;
 	}
 	return (byte_count);
