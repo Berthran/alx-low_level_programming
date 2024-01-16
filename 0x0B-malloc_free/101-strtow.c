@@ -26,6 +26,8 @@ char **strtow(char *str)
 		return (NULL);
 
 	no_of_words = word_count(str);
+	if (no_of_words == 0)
+		return (NULL);
 	no_of_ptrs = no_of_words + 1;
 
 	s_arr = (char **)malloc(sizeof(char *) * no_of_ptrs);
