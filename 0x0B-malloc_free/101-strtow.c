@@ -45,7 +45,7 @@ char **strtow(char *str)
 		/* Extract number of bytes from each word */
 		no_of_bytes = byte_count(str);
 		/* Allocate memory for bytes counted on the heap */
-		s_arr[i] = (char *)malloc(sizeof(char) * no_of_bytes);
+		s_arr[i] = (char *)malloc(sizeof(char) * no_of_bytes + 1);
 
 		/* Handle malloc error */
 		if (s_arr[i] == NULL)
