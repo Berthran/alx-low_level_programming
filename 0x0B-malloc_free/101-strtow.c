@@ -18,9 +18,7 @@ char **strtow(char *str)
 {
 	char *temp_str;
 	char **s_arr;
-	int no_of_words, no_of_ptrs, no_of_bytes, i, j, tot_bytes;
-
-	tot_bytes = 0;
+	int no_of_words, no_of_ptrs, no_of_bytes, i, j;
 
 	if (str == NULL || *str == '\0')
 		return (NULL); /* Return NULL for empty of NULL string */
@@ -45,7 +43,6 @@ char **strtow(char *str)
 		/* Extract number of bytes from each word */
 		no_of_bytes = byte_count(str);
 		/* Allocate memory for bytes counted on the heap */
-		tot_bytes += no_of_bytes;
 		s_arr[i] = (char *)malloc(sizeof(char) * no_of_bytes);
 
 		/* Handle malloc error */
@@ -66,8 +63,6 @@ char **strtow(char *str)
 	}
 	/* Set last element of array to NULL */
 	s_arr[i] = NULL;
-
-	printf("Total bytes allocated %d\n", tot_bytes);
 	return (s_arr);
 }
 
