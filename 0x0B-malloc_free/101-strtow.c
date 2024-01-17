@@ -16,19 +16,19 @@ char *first_letter(char *str, int bytes);
 
 char **strtow(char *str)
 {
-	char *emp_str, *temp_str;
+	char *temp_str;
 	char **s_arr;
-	int no_of_words, no_of_ptrs, no_of_bytes, i, j;
+	int no_of_words, no_of_ptrs, no_of_bytes, i, j, tot_bytes;
 
-	emp_str = "";
+	tot_bytes = 0;
 
-	if (str == NULL || str == emp_str)
-		return (NULL);
+	if (str == NULL || *str == '\0')
+		return (NULL); /* Return NULL for empty of NULL string */
 
 	/* Extract number of words from string */
 	no_of_words = word_count(str);
 	if (no_of_words == 0)
-		return (NULL);
+		return (NULL); /* Return NULL if no words found */
 
 	/* Calulate number of pointers needed */
 	no_of_ptrs = no_of_words + 1;
@@ -45,7 +45,8 @@ char **strtow(char *str)
 		/* Extract number of bytes from each word */
 		no_of_bytes = byte_count(str);
 		/* Allocate memory for bytes counted on the heap */
-		s_arr[i] = (char *)malloc(sizeof(char) * no_of_bytes + 1);
+		tot_bytes += no_of_bytes;
+		s_arr[i] = (char *)malloc(sizeof(char) * no_of_bytes);
 
 		/* Handle malloc error */
 		if (s_arr[i] == NULL)
@@ -65,6 +66,8 @@ char **strtow(char *str)
 	}
 	/* Set last element of array to NULL */
 	s_arr[i] = NULL;
+
+	printf("Total bytes allocated %d\n", tot_bytes);
 	return (s_arr);
 }
 
@@ -151,8 +154,8 @@ char *last_letter(char *str)
 			str++;
 		}
 		if (count > 0)
-			return (str--);
-		str++;
+			return (str);
+		++str;
 	}
 	return (str);
 }
