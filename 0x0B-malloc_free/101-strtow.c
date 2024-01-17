@@ -32,7 +32,7 @@ char **strtow(char *str)
 	no_of_ptrs = no_of_words + 1;
 
 	/* Allocate memory for no_of_ptrs on the heap */
-	s_arr = (char **)malloc(sizeof(char *) * no_of_ptrs);
+	s_arr = (char **)malloc(sizeof(char *) * (no_of_ptrs - 1));
 
 	/* Handle malloc error */
 	if (s_arr == NULL)
