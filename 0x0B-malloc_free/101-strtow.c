@@ -50,7 +50,8 @@ char **strtow(char *str)
 		/* Handle malloc error */
 		if (s_arr[i] == NULL)
 		{
-			free(s_arr[i]);
+			while (i-- > 0)
+				free(s_arr[i]);
 			free(s_arr);
 			return (NULL);
 		}
