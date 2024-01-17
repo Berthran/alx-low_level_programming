@@ -48,7 +48,7 @@ char **strtow(char *str)
 		/* Handle malloc error */
 		if (s_arr[i] == NULL)
 		{
-			while (i > 0)
+			while (i >= 0)
 			{
 				free(s_arr[i]);
 				i--;
