@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char *handleNullStr(char *str);
+int _strlen(char *str);
+char *writeChar(char *s1, char *s2, unsigned int n, unsigned int pos);
+
 /**
  * string_nconcat - concatenates s1 and s2 by n bytes of s2
  * @s1: string to concat to
@@ -27,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* Compare s2_len with n */
 	if (n >= s2_len)
 		n = s2_len;
-	
+
 	/* Allocate memory for concatenated string */
 	new_str = malloc(sizeof(char) * (s1_len + n + 1));
 	/* Handle malloc fail */
@@ -37,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* Write to new_str */
 	new_str = writeChar(s1, new_str, s1_len, 0);
 	new_str = writeChar(s2, new_str, n, s1_len);
-	new_str[n] = '\0';
+	new_str[s1_len + n] = '\0';
 
 	return (new_str);
 
@@ -47,7 +51,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  * handleNullStr - check if string passed is null
  * @str: string to check
  *
- * Return - "" if null, or the original string
+ * Return: "" if null, or the original string
  */
 
 char *handleNullStr(char *str)
@@ -68,7 +72,7 @@ int _strlen(char *str)
 {
 	int count = 0;
 
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		count++;
 		str++;
