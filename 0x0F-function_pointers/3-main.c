@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 {
 	int num1, num2, answer;
 	char *op;
-	
+
+
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -41,3 +42,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", answer);
 	return (0);
 }
+
