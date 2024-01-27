@@ -14,7 +14,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int count = 0;
 	va_list ap;
 
-	if (n != 0 && separator != NULL )
+	if (separator == NULL || *separator == '\0')
+		separator = "";
+
+	if (n != 0)
 	{
 		va_start(ap, n);
 		while (count++ < n - 1)
