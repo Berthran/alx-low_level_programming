@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * sum_listint - calculates the sum of elements in a linked list
+ * sum_listint - calculates the sum of elements in a linked lis
  * @head: beginning of the list
  *
  * Return: sum of elements in the list

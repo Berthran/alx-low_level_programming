@@ -17,7 +17,6 @@ int pop_listint(listint_t **head)
 
 	int node_count = 0;
 
-
 	if (head != NULL)
 	{
 		hptr = *head;
