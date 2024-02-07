@@ -31,6 +31,7 @@ size_t print_listint_safe(const listint_t *head)
 			n_nodes += 1;
 		else
 		{
+			n_nodes += 1;
 			printf("-> [%p] %d\n", (void *)head, head->n);
 			break;
 		}
