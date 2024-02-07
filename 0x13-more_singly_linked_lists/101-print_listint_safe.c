@@ -12,21 +12,24 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	int n;
-	const void *ptr = head;
+	const listint_t *ptr;
 	size_t n_nodes = 0;
 
 	if (head == NULL)
-		exit(98);
+		return (n_nodes);
 
-	while (head != NULL && (void *)head <= ptr)
+	while (head != NULL)
 	{
 		n = head->n;
 		printf("[%p] %d\n", (void *)head, n);
 		ptr = head;
 		head = head->next;
-		n_nodes += 1;
+		if (head < ptr)
+			n_nodes += 1;
+		else
+			break;
 	}
-	if ((void *)head > ptr)
+	if (head >= ptr)
 		printf("-> [%p] %d\n", (void *)head, head->n);
 	return (n_nodes);
 }
