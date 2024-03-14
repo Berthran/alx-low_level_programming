@@ -58,7 +58,7 @@ void print_binary(unsigned long int n)
 	iter = get_index_of_msd(n);
 	pow = iter;
 
-	(n == 0) ? putchar('0') : putchar('1');
+	(n == 0) ? _putchar('0') : _putchar('1');
 
 	while (j < iter)
 	{
@@ -79,12 +79,12 @@ void print_binary(unsigned long int n)
 			new_pow = get_index_of_msd(n);
 			while (new_pow != pow - 1)
 			{
-				putchar('0');
+				_putchar('0');
 				--pow;
 				++j;
 			}
 
-			(new_pow != 0) ? putchar('1'), ++j, --pow : --pow;
+			(new_pow != 0) ? _putchar('1'), ++j, --pow : --pow;
 		}
 	}
 }
