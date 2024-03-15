@@ -35,9 +35,9 @@ unsigned int get_index_of_msb(unsigned long int d)
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	size_t index_range = get_index_of_msb(n);
+	/*size_t index_range = get_index_of_msb(n);*/
 
-	if (index > index_range)
+	if (index > 63)
 		return (-1);
 	if (n == 0)
 		return (0);
