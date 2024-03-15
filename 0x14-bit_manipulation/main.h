@@ -13,7 +13,6 @@ unsigned long int _exp(unsigned long int i, unsigned long int j);
 void print_binary(unsigned long int n);
 
 int get_bit(unsigned long int n, unsigned int index);
-unsigned int get_index_of_msb(unsigned long int d);
 
 int set_bit(unsigned long int *n, unsigned int index);
 

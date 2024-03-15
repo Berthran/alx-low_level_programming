@@ -3,29 +3,6 @@
 #include "main.h"
 
 /**
- * get_index_of_msb - gets the index number of the most
- * sifnificant bit of a decimal
- * @d: the decimal number
- *
- * Return: the index of the most significant digit
- */
-
-unsigned int get_index_of_msb(unsigned long int d)
-{
-	int pow = 0;
-
-	if (d <= 1)
-		return (0);
-	while (d != 1)
-	{
-		d = d >> 1;
-		++pow;
-	}
-	return (pow);
-}
-
-
-/**
  * get_bit - uses an index to locate a bit
  * @n: the decimal number
  * @index: the position of the bit of interest
