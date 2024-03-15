@@ -9,7 +9,7 @@ int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 
 int get_index_of_msd(unsigned long int d);
-int _exp(unsigned long int i, unsigned long int j);
+unsigned long int _exp(unsigned long int i, unsigned long int j);
 void print_binary(unsigned long int n);
 
 int get_bit(unsigned long int n, unsigned int index);

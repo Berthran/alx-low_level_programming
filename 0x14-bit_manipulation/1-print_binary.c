@@ -33,7 +33,7 @@ int get_index_of_msd(unsigned long int d)
  * Return: the exponential of i i.e i^j
  */
 
-int _exp(unsigned long int i, unsigned long int j)
+unsigned long int _exp(unsigned long int i, unsigned long int j)
 {
 	if (j == 0)
 		return (1);
@@ -52,7 +52,7 @@ int _exp(unsigned long int i, unsigned long int j)
 
 void print_binary(unsigned long int n)
 {
-	int j = 0, iter;
+	unsigned long int j = 0, iter;
 	unsigned long int pow, new_pow;
 
 	iter = get_index_of_msd(n);
