@@ -29,7 +29,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		new_dlistint_t->prev = NULL;
 		new_dlistint_t->next = head_crawler;
-		head_crawler->prev = new_dlistint_t
+		head_crawler->prev = new_dlistint_t;
 		*h = new_dlistint_t;
 		return (new_dlistint_t);
 	}
