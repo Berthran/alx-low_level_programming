@@ -45,10 +45,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				new_dlistint_t->prev = prev_node;
 				new_dlistint_t->next = head_crawler;
 				prev_node->next = new_dlistint_t;
+				head_crawler->prev = new_dlistint_t;
 				return (new_dlistint_t);
 			}
 		}
-		/*return (new_dlistint);*/
+		/*return (new_dlistint_t);*/
 	}
 	else if (idx == no_of_nodes)
 	{
