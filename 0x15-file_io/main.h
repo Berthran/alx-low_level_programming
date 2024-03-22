@@ -14,7 +14,7 @@ int close_fd(int fd);
 
 int open_file(char *filename, int flags, int mode, int err);
 
-int readwrite_file(int fd, char *buffer, size_t bytes, char *filename, int call);
-
+int readwrite_file(int fd, char *buffer, size_t bytes,
+		char *filename, int call);
 
 #endif
