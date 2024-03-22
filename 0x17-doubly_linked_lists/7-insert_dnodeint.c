@@ -21,7 +21,7 @@ dlistint_t *insert_dnodeint_at_0(dlistint_t **h, dlistint_t **new_node)
 	if (head_crawler != NULL)
 		head_crawler->prev = *new_node;
 	*h = *new_node;
-	return(*new_node);
+	return (*new_node);
 }
 
 /**
@@ -33,12 +33,13 @@ dlistint_t *insert_dnodeint_at_0(dlistint_t **h, dlistint_t **new_node)
  * Return: the address of the new node
  */
 
-dlistint_t *insert_dnodeint_at_mid(dlistint_t **h, dlistint_t **new_node, unsigned int idx)
+dlistint_t *insert_dnodeint_at_mid(dlistint_t **h, dlistint_t **new_node,
+		unsigned int idx)
 {
 	dlistint_t *head_crawler, *prev_node;
 	unsigned int node = 0;
 
-        head_crawler = *h;
+	head_crawler = *h;
 
 	while (head_crawler != NULL)
 	{
@@ -100,9 +101,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	no_of_nodes = count_dlistint_nodes(*h);
 	new_dlistint_t->n = n;
-	/*head_crawler = *h;*/
 
-	/* Handle insertion at index 0 */
+	/* Handle insertion at beginning of the DLL */
 	if (idx == 0)
 	{
 		new_dlistint_t = insert_dnodeint_at_0(h, &new_dlistint_t);
@@ -115,16 +115,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new_dlistint_t = insert_dnodeint_at_mid(h, &new_dlistint_t, idx);
 		return (new_dlistint_t);
 	}
+
+	/* Handle insertion at the end of the DLL */
 	else if (idx == no_of_nodes)
 	{
 		new_dlistint_t = insert_dnodeint_at_end(h, &new_dlistint_t);
 		return (new_dlistint_t);
-		/*while (head_crawler->next != NULL)
-			head_crawler = head_crawler->next;
-		new_dlistint_t->prev = head_crawler;
-		head_crawler->next = new_dlistint_t;
-		new_dlistint_t->next = NULL;
-		return (new_dlistint_t);*/
 	}
 	return (NULL);
 }
