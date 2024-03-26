@@ -1,3 +1,3 @@
 #!/bin/bash
-export LD_PRELOAD=./librand.so
-export LD_PRELOAD=./librand.so
+echo "export LD_PRELOAD=./librand.so" >> $HOME/.bashrc
+source $HOME/.bashrc
