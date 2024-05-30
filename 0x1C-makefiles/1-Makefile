@@ -5,5 +5,5 @@ SRC = $(wildcard *.c)
 
 all: school
 
-school: main.c school.c
-	$(CC) $(SRC) -o school
+school: ${SRC}
+	${CC} ${SRC} -o school
