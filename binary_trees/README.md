@@ -41,3 +41,13 @@ typedef struct binary_tree_s avl_t;
 ```C
 typedef struct binary_tree_s heap_t;
 ```
+
+The function `binary_tree_print.c` can be used to print Binary trees in a pretty way
+```C
+                           .----------------------(006)-------.
+                      .--(001)-------.                   .--(008)--.
+                 .--(-02)       .--(003)-------.       (007)     (009)
+       .-------(-06)          (002)       .--(005)
+  .--(-08)--.                           (004)
+(-09)     (-07)
+```Z
